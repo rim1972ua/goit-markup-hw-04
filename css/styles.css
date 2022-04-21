@@ -11,6 +11,7 @@
     --buttom-bg-hover-color: #188CE8;
     --border-color: #ECECEC;
     --samples-border-color: #EEEEEE;
+    --background-color: #C4C4C4;
 }
 
 html {
@@ -157,11 +158,20 @@ nav,
 }
 
 .hero {
-    background-color: var(--footer-background-color);
+    background-color: var(--background-color);
     text-align: center;
     padding: 200px 0;
     background-size: cover;
     background-position: center;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/hero-opt.jpg);
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero h1 {
@@ -275,18 +285,6 @@ button.button-studio:focus {
     margin-bottom: 10px;
 }
 
-/* .team-list img {
-    margin-bottom: 30px;
-}
-
-.team-list p {
-    margin-bottom: 30px;
-}
-
-.team-list h3,
-.team-list p {
-} */
-
 .footer {
     background-color: var(--footer-background-color);
     padding-top: 60px;
@@ -321,6 +319,33 @@ address li + li {
 .footer-tel:hover,
 .footer-tel:focus {
     color: var(--accent-color);
+}
+
+.feature-list .item::before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-bottom: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+}
+
+.feature-list .item:nth-child(1)::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.feature-list .item:nth-child(2)::before {
+    background-image: url(../images/clock.svg);
+}
+
+.feature-list .item:nth-child(3)::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.feature-list .item:nth-child(4)::before {
+    background-image: url(../images/astronaut.svg);
 }
 
 /* --- portfolio page --- */
