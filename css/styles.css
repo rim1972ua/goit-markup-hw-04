@@ -118,8 +118,7 @@ nav,
     align-items: center;
 }
 
-.main-nav li + li,
-.main-address li + li {
+.main-nav li + li {
     margin-left: 50px;
 }
 
@@ -129,6 +128,15 @@ nav,
 
 .main-address {
     margin-left: auto;
+}
+
+.main-address li + li {
+    margin-left: 30px;
+}
+
+.header-item .icon {
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 .main-nav a,
@@ -145,6 +153,8 @@ nav,
 }
 
 .main-address a {
+    display: flex;
+    align-items: center;
     color: var(--main-text-color);
 }
 
@@ -155,6 +165,7 @@ nav,
 .main-address a:focus,
 .main-address a:active {
     color: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 .hero {
@@ -223,6 +234,36 @@ button.button-studio:focus {
     color: var(--main-text-color);
 }
 
+.feature-list .thumb {
+    display: block;
+    vertical-align: middle;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--team-background-color);
+}
+
+
+/*
+.feature-list .icon {
+}
+
+.feature-list .item:nth-child(1)::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.feature-list .item:nth-child(2)::before {
+    background-image: url(../images/clock.svg);
+}
+
+.feature-list .item:nth-child(3)::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.feature-list .item:nth-child(4)::before {
+    background-image: url(../images/astronaut.svg);
+} */
+
 .team-member-name {
     font-weight: 500;
     font-size: 16px;
@@ -249,6 +290,7 @@ button.button-studio:focus {
     background-color: var(--team-background-color);
 }
 
+.clients-list,
 .feature-list,
 .work,
 .team-list,
@@ -263,16 +305,14 @@ button.button-studio:focus {
 }
 
 .feature-list li + li,
-.team-list li + li {
+.team-list li + li,
+.section-work li + li,
+.clients-list .item + .item {
     margin-left: 30px;
 }
 
 .section-work li {
     width: 370px;
-}
-
-.section-work li + li {
-    margin-left: 30px;
 }
 
 .team-member {
@@ -284,6 +324,24 @@ button.button-studio:focus {
 .team-list h3 {
     margin-bottom: 10px;
 }
+
+/* 
+.clients-list .item {
+    display: block;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.icon {
+    vertical-align: auto;
+    margin: 0, auto;
+    width: 106px;
+    height: 60px;
+} */
+
 
 .footer {
     background-color: var(--footer-background-color);
@@ -319,33 +377,6 @@ address li + li {
 .footer-tel:hover,
 .footer-tel:focus {
     color: var(--accent-color);
-}
-
-.feature-list .item::before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-bottom: 30px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4px;
-}
-
-.feature-list .item:nth-child(1)::before {
-    background-image: url(../images/antenna.svg);
-}
-
-.feature-list .item:nth-child(2)::before {
-    background-image: url(../images/clock.svg);
-}
-
-.feature-list .item:nth-child(3)::before {
-    background-image: url(../images/diagram.svg);
-}
-
-.feature-list .item:nth-child(4)::before {
-    background-image: url(../images/astronaut.svg);
 }
 
 /* --- portfolio page --- */
