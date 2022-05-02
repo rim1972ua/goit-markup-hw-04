@@ -333,8 +333,22 @@ button.button-studio:focus {
     background-size: 44px;
     border-radius: 50%;
     align-items: center;
+    justify-content: center;
+}
+
+/* 
+.social-links li {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
     vertical-align: middle;
 }
+*/
 
 .social-links li:hover,
 .social-links li:focus {
