@@ -12,6 +12,7 @@
     --border-color: #ECECEC;
     --samples-border-color: #EEEEEE;
     --background-color: #C4C4C4;
+    --clients-color: #AFB1B8;
 }
 
 html {
@@ -235,34 +236,17 @@ button.button-studio:focus {
 }
 
 .feature-list .thumb {
-    display: block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
     height: 120px;
     margin-bottom: 30px;
     border-radius: 4px;
     background-color: var(--team-background-color);
 }
 
-
-/*
-.feature-list .icon {
+.thumb .icon {
+    margin: 0 auto;
 }
-
-.feature-list .item:nth-child(1)::before {
-    background-image: url(../images/antenna.svg);
-}
-
-.feature-list .item:nth-child(2)::before {
-    background-image: url(../images/clock.svg);
-}
-
-.feature-list .item:nth-child(3)::before {
-    background-image: url(../images/diagram.svg);
-}
-
-.feature-list .item:nth-child(4)::before {
-    background-image: url(../images/astronaut.svg);
-} */
 
 .team-member-name {
     font-weight: 500;
@@ -275,6 +259,7 @@ button.button-studio:focus {
     font-size: 16px;
     line-height: 1.19;
     color: var(--main-text-color);
+    margin-bottom: 16px;
 }
 
 .section-feature,
@@ -325,28 +310,74 @@ button.button-studio:focus {
     margin-bottom: 10px;
 }
 
-/* 
-.clients-list .item {
-    display: block;
-    width: 170px;
-    height: 92px;
-    border: 1px solid #AFB1B8;
-    box-sizing: border-box;
-    border-radius: 4px;
+.team-list .item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
-.icon {
-    vertical-align: auto;
-    margin: 0, auto;
-    width: 106px;
-    height: 60px;
-} */
+.social-links .links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
+.social-links .icon {
+    fill: currentColor;
+}
+
+.social-links li {
+    box-sizing: border-box;
+    background-size: 44px;
+    border-radius: 50%;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.social-links li:hover,
+.social-links li:focus {
+    background-color: var(--buttom-bg-hover-color);
+    background-position: center;
+}
+
+.social-links .icon:hover,
+.social-links .icon:focus {
+    fill: var(--accent-white-color);
+}
+
+.clients-list .thumb {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--clients-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.clients-list .icon {
+    fill: var(--clients-color);
+}
+
+.clients-list .thumb:hover,
+.clients-list .thumb:focus,
+.clients-list .icon:hover,
+.clients-list .icon:focus {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+}
 
 .footer {
     background-color: var(--footer-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer .container {
+    display: flex;
+    align-items: baseline;
 }
 
 address li + li {
@@ -379,6 +410,46 @@ address li + li {
     color: var(--accent-color);
 }
 
+.footer .container .links {
+    margin-right: 70px;
+}
+
+.social > p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-white-color);
+    margin-bottom: 20px;
+}
+
+.social .link,
+.social-links .link {
+    display: inline-block;
+    box-sizing: border-box;
+    background-size: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+
+.social .icon {
+    fill: currentColor;
+    align-items: center;
+}
+
+.social .link:hover,
+.social .link:focus {
+    background-color: var(--buttom-bg-hover-color);
+    background-position: center;
+}
+
+.social link + link {
+    margin-left: 10px;
+}
+
 /* --- portfolio page --- */
 
 button.button-filter {
@@ -396,6 +467,9 @@ button.button-filter:focus,
 button.button-filter:active {
     background-color: var(--accent-color);
     color: var(--accent-white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter {
@@ -438,6 +512,14 @@ button.button-filter:active {
     border-width: 1px;
     border-style: solid;
     border-color: var(--samples-border-color);
+    box-sizing: border-box;
+}
+
+.samples li:hover,
+.samples li:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .samples li:nth-child(3n) {
