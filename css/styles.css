@@ -319,41 +319,27 @@ button.button-studio:focus {
 
 .social-links .links {
     display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.social-links .icon {
-    fill: currentColor;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-links li {
+    display: flex;
     box-sizing: border-box;
     background-size: 44px;
     border-radius: 50%;
     align-items: center;
-    justify-content: center;
 }
 
-/* 
-.social-links li {
-    display: flex;
-    text-decoration: none;
-    color: inherit;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
+.social-links .icon {
     vertical-align: middle;
+    fill: var(--clients-color);
+    margin-top: 12px;
 }
-*/
 
 .social-links li:hover,
 .social-links li:focus {
     background-color: var(--buttom-bg-hover-color);
-    background-position: center;
 }
 
 .social-links .icon:hover,
@@ -450,14 +436,14 @@ address li + li {
 }
 
 .social .icon {
-    fill: currentColor;
-    align-items: center;
+    fill: var(--accent-white-color);
+    margin-left: 12px;
+    margin-top: 12px;
 }
 
-.social .link:hover,
-.social .link:focus {
+.link:hover,
+.link:focus {
     background-color: var(--buttom-bg-hover-color);
-    background-position: center;
 }
 
 .social link + link {
