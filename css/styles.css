@@ -238,14 +238,11 @@ button.button-studio:focus {
 .feature-list .thumb {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 120px;
     margin-bottom: 30px;
     border-radius: 4px;
     background-color: var(--team-background-color);
-}
-
-.thumb .icon {
-    margin: 0 auto;
 }
 
 .team-member-name {
@@ -262,10 +259,10 @@ button.button-studio:focus {
     margin-bottom: 16px;
 }
 
-.section-feature,
+/* .section-feature,
 .section-work {
     background-color: var(--feature-background-color);
-}
+} */
 
 .section-work {
     padding-top: 0;
@@ -273,6 +270,10 @@ button.button-studio:focus {
 
 .section-team {
     background-color: var(--team-background-color);
+}
+
+.team-list .item {
+    background-color: var(--accent-white-color);
 }
 
 .clients-list,
@@ -323,48 +324,41 @@ button.button-studio:focus {
     align-items: center;
 }
 
+.social-links {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
 .social-links li {
-    display: flex;
-    box-sizing: border-box;
+    display: inline;
     background-size: 44px;
     border-radius: 50%;
-    align-items: center;
+    fill: var(--clients-color);
 }
 
 .social-links .icon {
-    vertical-align: middle;
-    fill: var(--clients-color);
     margin-top: 12px;
 }
 
 .social-links li:hover,
 .social-links li:focus {
     background-color: var(--buttom-bg-hover-color);
-}
-
-.social-links .icon:hover,
-.social-links .icon:focus {
     fill: var(--accent-white-color);
 }
 
-.clients-list .thumb {
+.clients-list .item {
     display: flex;
     width: 170px;
     height: 92px;
     border: 1px solid var(--clients-color);
-    box-sizing: border-box;
     border-radius: 4px;
     align-items: center;
-}
-
-.clients-list .icon {
+    justify-content: center;
     fill: var(--clients-color);
 }
 
-.clients-list .thumb:hover,
-.clients-list .thumb:focus,
-.clients-list .icon:hover,
-.clients-list .icon:focus {
+.clients-list .item:hover,
+.clients-list .item:focus {
     border-color: var(--accent-color);
     fill: var(--accent-color);
 }
@@ -427,7 +421,6 @@ address li + li {
 .social .link,
 .social-links .link {
     display: inline-block;
-    box-sizing: border-box;
     background-size: 44px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
@@ -441,13 +434,13 @@ address li + li {
     margin-top: 12px;
 }
 
-.link:hover,
-.link:focus {
-    background-color: var(--buttom-bg-hover-color);
+.social .link + .link {
+    margin-left: 10px;
 }
 
-.social link + link {
-    margin-left: 10px;
+.social .link:hover,
+.social .link:focus {
+    background-color: var(--buttom-bg-hover-color);
 }
 
 /* --- portfolio page --- */
@@ -512,7 +505,6 @@ button.button-filter:active {
     border-width: 1px;
     border-style: solid;
     border-color: var(--samples-border-color);
-    box-sizing: border-box;
 }
 
 .samples li:hover,
