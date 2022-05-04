@@ -441,7 +441,7 @@ address li + li {
 }
 
 .social .link + .link {
-    margin-left: 10px;
+    margin-left: 6px;
 }
 
 .social .link:hover,
