@@ -94,7 +94,7 @@ header{
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.9;
+    line-height: 1.19;
     color: var(--accent-color);
     text-decoration: none;
 }
@@ -321,7 +321,6 @@ button.button-studio:focus {
 .social-item {
     width: 44px;
     height: 44px;
-    fill: var(--clients-color);
 }
 
 .social-links .social-item + .social-item {
@@ -335,6 +334,7 @@ button.button-studio:focus {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    fill: var(--clients-color);
 }
 
 .social-link:hover,
@@ -376,6 +376,11 @@ button.button-studio:focus {
     align-items: baseline;
 }
 
+.footer .logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
 address li + li {
     margin-top: 9px;
 }
@@ -406,7 +411,7 @@ address li + li {
     color: var(--accent-color);
 }
 
-.footer .container .links {
+.footer .links {
     margin-right: 70px;
 }
 
